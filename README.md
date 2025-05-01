@@ -1,54 +1,38 @@
-# React + TypeScript + Vite
+## About The Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small project for create a simple distance calculator using leaft and OSM for fetch and build the map points.
+### Built With
 
-Currently, two official plugins are available:
+- [React](https://reactjs.org)
+- [Tailwindcss](https://tailwindcss.com/)
+- [Open Route Services](https://openrouteservice.org/)
+- [Vitejs](https://vite.dev/)
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get a local copy up and running follow these simple example steps.
+### Prerequisites
 
-## Expanding the ESLint configuration
+follow the step to run the project
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- npm
+  ```sh
+  npm install 
+  ```
+### Installation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To get the api request for routes you need to get a APi key from  Open Route Services register an get API key 
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Get a free API Key at https://openrouteservice.org/
+2. Clone the repo
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Create .env file base on the .env-example
+5. Enter your API in `.env` file
+   ```js 
+   VITE_OPENROUTESERVICE_API_KEY = "ENTER YOUR API";
+   ```
+## License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Distributed under the MIT License. See [MIT License](https://opensource.org/licenses/MIT) for more information.
